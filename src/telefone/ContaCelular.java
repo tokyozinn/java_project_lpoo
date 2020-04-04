@@ -1,4 +1,6 @@
-package exercicio;
+package telefone;
+
+
 
 public class ContaCelular extends ContaTelefone {
 
@@ -28,19 +30,22 @@ public class ContaCelular extends ContaTelefone {
 	}
 	
 	public boolean checarOperadora() {
-		if (this.operadora.equals("TC")) {
+		if (this.getOperadora().equals("TC")) {
 			return true;
 		} else {
 			return false;
 		}
 	}
 
-	public String getNumero() {
-		return this.getNumero();
-	}
 
 	public String getOperadora() {
-		return this.getOperadora();
+		return this.operadora;
+	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + String.format(" | Operadora: %s", this.operadora);
+		
 	}
 
 }

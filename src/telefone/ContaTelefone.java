@@ -1,4 +1,6 @@
-package exercicio;
+package telefone;
+
+import java.util.Scanner;
 
 public class ContaTelefone {
 	
@@ -11,6 +13,7 @@ public class ContaTelefone {
 		this.numero = numero;
 		this.codigo = codigo;
 		this.minutosFalados = minutos;
+		
 	}
 	
 	public double getValorDaConta() {
@@ -34,5 +37,22 @@ public class ContaTelefone {
 	public String getNumero() {
 		return this.numero;
 	}
+	
+	public String input() {
+		Scanner sc1 = new Scanner(System.in);
+		String entrada = sc1.nextLine();
+		System.out.println(entrada);
+		return entrada;
+
+	}
+	
+	public int getCodigo() {
+		return this.codigo;
+	}
+	
+	public void setCodigo(int c) {
+		this.codigo = c;
+	}
+	
 
 }
